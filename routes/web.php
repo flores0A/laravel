@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EmpleadoController;
+use App\Http\Controllers\ProductoController;
 use Illuminate\Routing\RouteGroup;
 
 /*
@@ -25,6 +26,7 @@ Route::get('/empleado', function () {
 Route::get('/empleado/create', [EmpleadoController::class, 'create']);
 */
 Route::resource('empleado', EmpleadoController::class)->middleware('auth');
+Route::resource('producto', ProductoController::class)->middleware('auth');
 //codigo ppara sacar el register y reset
 Auth::routes(['register'=>false,'reset'=>false]);
 

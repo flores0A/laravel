@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string('Precio');
             $table->string('Fecha_V');
             $table->string('Proveedor_id');
+            $table->string('Foto');
 
             $table->timestamps();
         });
