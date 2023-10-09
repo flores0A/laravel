@@ -20,7 +20,7 @@ class EmpleadoController extends Controller
        // return view('empleado.index', $datos);
 
             //
-            $datos['empleados']=Empleado::paginate(20);
+            $datos['empleados']=Empleado::paginate(8);
             return view('empleado.index', $datos);
       
     }
