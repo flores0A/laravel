@@ -33,6 +33,9 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
+                    
+                    @if(Auth::check())
+                    <!-- Verifica si el usuario está autenticado -->
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('empleado.index') }}">{{ __(' Empleado') }}</a>
@@ -41,12 +44,12 @@
                             <a class="nav-link" href="{{ route('producto.index') }}">{{ __(' Producto') }}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('producto.index') }}">{{ __(' Producto') }}</a>
+                            <a class="nav-link" href="{{ route('producto.index') }}">{{ __(' Proveedor') }}</a>
                         </li>
                     </ul>
-                    
-                        
-                   
+                    @endif
+
+
 
 
                     <!-- Right Side Of Navbar -->

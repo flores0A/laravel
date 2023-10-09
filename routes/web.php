@@ -28,7 +28,7 @@ Route::get('/empleado/create', [EmpleadoController::class, 'create']);
 Route::resource('empleado', EmpleadoController::class)->middleware('auth');
 Route::resource('producto', ProductoController::class)->middleware('auth');
 //codigo ppara sacar el register y reset
-Auth::routes(['register'=>false,'reset'=>false]);
+Auth::routes(['register'=>false,'reset'=>false]); 
 
 Route::get('/home', [EmpleadoController::class, 'index'])->name('home');
 
