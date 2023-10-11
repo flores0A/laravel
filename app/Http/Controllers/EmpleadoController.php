@@ -156,7 +156,7 @@ return redirect('empleado')->with('mensaje','Empleado Modificado');
         //
         $empleado=Empleado::findOrfail($id);
         //codigo si se tiene imagenes en el registro foto es el nombre de la base de datos
-        if (Storage::delete('public/'.$empleado->Foto)) {
+        if (Storage::delete('public/'.$empleado->foto)) {
             Empleado::destroy($id);
         }
        

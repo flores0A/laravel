@@ -32,6 +32,10 @@ Auth::routes(['register'=>false,'reset'=>false]);
 
 Route::get('/home', [EmpleadoController::class, 'index'])->name('home');
 
+Route::get('/storage/uploads/{filename}', function ($filename) {
+    return response()->file(storage_path('app/public/uploads/' . $filename));
+})->where('filename', '.*');
+
 Route::group(['middleware'=>'auth'], function () {
     
     Route::get('/', [EmpleadoController::class, 'index'])->name('home');

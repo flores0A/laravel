@@ -20,8 +20,8 @@
 <div class="form-group">
     <label for="Nombre">Nombre</label>
     <input type="text" class="form-control" name="Nombre"
-        value="{{ isset($empleado->nombre) ? $empleado->nombre : old('Nombre') }}" id="Nombre">
-
+    value="{{ isset($empleado->nombre) ? $empleado->nombre : old('Nombre') }}" id="Nombre">
+    <br>
 </div>
 <div class="form-group">
     <label for="Apellido">Apellido</label>
@@ -31,7 +31,7 @@
 </div>
 <div class="form-group">
     <label for="Correo">Correo</label>
-    <input type="text" class="form-control" name="Correo"
+    <input type="email" class="form-control" name="Correo"
         value="{{ isset($empleado->correo) ? $empleado->correo :old('Correo') }}" id="Correo">
     <br>
 </div>
