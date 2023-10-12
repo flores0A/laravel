@@ -1,11 +1,11 @@
-
+<div class=" background-image" id="background-image">
 @extends('layouts.app')
 
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8 ">
-            <div class="card  login-form ">
+            <div class=" login-form ">
                 <div class="card-header text-center  ">
                     <h1><b>{{ __('LOGIN') }}</b></h1>
                 </div>
@@ -83,3 +83,4 @@
     </div>
 </div>
 @endsection
+</div>
